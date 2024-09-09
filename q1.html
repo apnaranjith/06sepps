@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        num=4;rows=4;
+for(i=1;i<=rows;i++){
+    s="";limit=1;
+    for(j=1;j<=i;j++){
+        comp=0;
+        if(i==1&&j==1){
+            s=s+num;
+            num++;
+        }
+        else{
+            while(limit<=j){
+                for(k=2;k<num;k++){
+                    if(num%k==0){
+                        comp=1;
+                        break;
+                    }
+                }
+                if(comp==1){
+                    s=s+num+" ";
+                    num++;
+                    limit++;
+                }
+                if(comp==0)
+                {
+                    num++
+                }
+            }
+        }
+    }
+    console.log(s);
+}
+    </script>
+    
+</body>
+</html>
